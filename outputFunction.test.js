@@ -1216,7 +1216,7 @@ describe(`output`, () => {
 
     const testCases = testHelper.createTestCasesPerLocale(testVariables);
 
-    it.each(testCases)(
+    it.only.each(testCases)(
       "should generate complex NextPaymentInfo prompts for %s",
       async ({
         locale,

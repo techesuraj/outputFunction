@@ -332,13 +332,14 @@ const outputFunction = (params) => {
       }
 
       // code for NextPaymentInfoPrompt
-      if (
-        context == "NextPaymentInfo" &&
-        params.nextPaymentInfoFlag == "true"
-      ) {
-        var nextPaymentInfoPrompt =
-          realizeNextPaymentInfoPrompt(responseBody) || "";
-      } else FailExitReason = "apiException";
+      var nextPaymentInfoPrompt;
+      if (context == "NextPaymentInfo") {
+        if (params.nextPaymentInfoFlag == "true") {
+          nextPaymentInfoPrompt = realizeNextPaymentInfoPrompt(responseBody) || "";
+        } else {
+          FailExitReason = "apiException";
+        }
+      }
 
       if (FailExitReason) wsStatus = "failure";
 
@@ -371,8 +372,28 @@ const outputFunction = (params) => {
     console.log("JS Exception");
     console.log(e);
     toReturn = {
+      isPaymentEligible: undefined,
+      isDebitCardPaymentEligible: undefined,
+      ineligibilityReason: undefined,
+      paymentAccounts: undefined,
+      lastPostedPayment: undefined,
+      paymentOptions: undefined,
+      minimumPaymentAllowed: undefined,
+      maximumPaymentAllowed: undefined,
+      dueDate: undefined,
+      earliestAvailablePaymentDate: undefined,
+      latestAvailablePaymentDate: undefined,
+      isCutOffReached: undefined,
+      isCycleDayToday: undefined,
+      isAccountCycled: undefined,
+      isDueDateAfterCurrentDate: undefined,
       paymentInformationWSStatus: "failure",
-      FailExitReason: FailExitReason,
+      lastUsedBankAccount: undefined,
+      lastUsedDebitBankAccount: undefined,
+      paymentInformationWSResponseBody: undefined,
+      paymentOptionsUniqueId: undefined,
+      nextPaymentInfoPrompt: undefined,
+      FailExitReason: "apiException",
     };
   }
   // console.log(toReturn);
@@ -478,7 +499,7 @@ const outputFunction = (params) => {
       if (isDueDateAfterCurrentDate === false) {
         prompt = "ID_payment_due_notice";
       } else {
-        prompt = "ID_no_payment_due_notice";
+        prompt = "ID_next_payment_due_notice";
       }
 
       return translate(dictionary, etaObj, prompt, ocpvars, translationParams);
@@ -656,6 +677,10 @@ const outputFunction = (params) => {
   }
 
   function refactorCureAmount(paymentOptions) {
+    if (!paymentOptions || !Array.isArray(paymentOptions)) {
+      return paymentOptions;
+    }
+    
     paymentOptions.forEach(function (option, index) {
       if (option.paymentOptionName == "CureAmount") {
         option.paymentOptionName = "MinimumPayment";
