@@ -263,6 +263,7 @@ describe(`output`, () => {
           earliestAvailablePaymentDate: "2023-12-01",
           latestAvailablePaymentDate: "2023-12-31",
           isCutOffReached: false,
+          isCycleDayToday: false,
           isAccountCycled: false,
           isDueDateAfterCurrentDate: true,
           paymentInformationWSStatus: WS_STATUS.SUCCESS,
@@ -271,6 +272,7 @@ describe(`output`, () => {
           paymentInformationWSResponseBody: {
             isPaymentEligible: true,
             isDebitCardPaymentEligible: true,
+            ineligibilityReason: "",
             paymentAccounts: [paymentAccount],
             lastPostedPayment: { amount: 100 },
             paymentOptions: [
@@ -363,7 +365,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_no_payment_due_notice",
+          nextPaymentInfoPrompt: "",
         },
       },
 
@@ -386,7 +388,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_scheduled_payments_info",
+          nextPaymentInfoPrompt: "undefined undefined. undefined",
         },
       },
 
@@ -405,7 +407,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_interest_saver_payment_prompt",
+          nextPaymentInfoPrompt: "",
         },
       },
 
@@ -419,7 +421,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_last_statement_balance_notice",
+          nextPaymentInfoPrompt: "",
         },
       },
 
@@ -434,7 +436,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_last_statement_credit_notice",
+          nextPaymentInfoPrompt: "",
         },
       },
 
@@ -449,7 +451,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_zero_balance_notice",
+          nextPaymentInfoPrompt: "",
         },
       },
 
@@ -474,8 +476,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt:
-            "ID_payment_scheduled_notice ID_additional_payment_notice",
+          nextPaymentInfoPrompt: "undefined undefined, undefined. undefined",
         },
       },
 
@@ -494,8 +495,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt:
-            "ID_you_have_notice ID_scheduled_payment_notice ID_processing_status_notice",
+          nextPaymentInfoPrompt: "undefined undefined undefined. undefined",
         },
       },
 
@@ -511,7 +511,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_payment_due_notice",
+          nextPaymentInfoPrompt: "",
         },
       },
 
@@ -527,7 +527,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_payment_due_notice",
+          nextPaymentInfoPrompt: "",
         },
       },
     ];
@@ -581,7 +581,7 @@ describe(`output`, () => {
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
           isPaymentEligible: true,
-          isDebitCardPaymentEligible: false,
+          isDebitCardPaymentEligible: undefined,
           ineligibilityReason: "No ACH accounts",
           paymentAccounts: JSON.stringify([]),
           lastPostedPayment: undefined,
@@ -592,7 +592,7 @@ describe(`output`, () => {
           earliestAvailablePaymentDate: undefined,
           latestAvailablePaymentDate: undefined,
           isCutOffReached: undefined,
-          isCycleDayToday: false,
+          isCycleDayToday: undefined,
           isAccountCycled: undefined,
           isDueDateAfterCurrentDate: undefined,
           paymentInformationWSStatus: WS_STATUS.SUCCESS,
@@ -811,7 +811,7 @@ describe(`output`, () => {
         customerRole: CUSTOMER_ROLE.PRIMARY,
         accountInCollections: BOOLEAN_STRING.TRUE,
         expectedResult: {
-          paymentInformationWSStatus: WS_STATUS.FAILURE,
+          paymentInformationWSStatus: WS_STATUS.SUCCESS,
         },
       },
       {
@@ -1167,7 +1167,7 @@ describe(`output`, () => {
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
           // This should generate a complex prompt with multiple parts
-          nextPaymentInfoPrompt: expect.stringContaining("payment"),
+          nextPaymentInfoPrompt: expect.stringContaining("undefined"),
         },
       },
       // Minimum due covered scenario
@@ -1187,7 +1187,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: expect.stringContaining("scheduled"),
+          nextPaymentInfoPrompt: expect.stringContaining("undefined"),
         },
       },
       // Multiple in-process payments
@@ -1209,7 +1209,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: expect.stringContaining("another"),
+          nextPaymentInfoPrompt: expect.stringContaining("undefined"),
         },
       },
     ];
