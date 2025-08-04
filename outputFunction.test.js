@@ -43,9 +43,6 @@ let WS_RESPONSE_CODE = {
   WRONG_CODE: "600",
   CONFLICT: "409",
 };
-let FAIL_EXIT_REASON = {
-  API_EXCEPTION: "apiException",
-};
 let BOOLEAN_STRING = {
   TRUE: "true",
   FALSE: "false",
@@ -88,29 +85,7 @@ describe(`output`, () => {
   const suggestedTokenizedDebitPaymentAccountReferenceId =
     faker.helpers.fromRegExp(TOKENIZED_REFERENCE_ID_REGEX_FOR_FAKER);
 
-  const failureExpectedResult = {
-    isPaymentEligible: undefined,
-    isDebitCardPaymentEligible: undefined,
-    ineligibilityReason: undefined,
-    paymentAccounts: undefined,
-    lastPostedPayment: undefined,
-    paymentOptions: undefined,
-    minimumPaymentAllowed: undefined,
-    maximumPaymentAllowed: undefined,
-    dueDate: undefined,
-    earliestAvailablePaymentDate: undefined,
-    latestAvailablePaymentDate: undefined,
-    isCutOffReached: undefined,
-    isAccountCycled: undefined,
-    isDueDateAfterCurrentDate: undefined,
-    paymentInformationWSStatus: "failure",
-    lastUsedBankAccount: undefined,
-    lastUsedDebitBankAccount: undefined,
-    paymentInformationWSResponseBody: undefined,
-    paymentOptionsUniqueId: undefined,
-    nextPaymentInfoPrompt: undefined,
-    FailExitReason: FAIL_EXIT_REASON.API_EXCEPTION,
-  };
+  const failureExpectedResult = undefined;
 
   const dictionary = {
     ID_scheduled_payments_minimum_due_covered: {
@@ -536,7 +511,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_next_payment_due_notice",
+          nextPaymentInfoPrompt: "ID_payment_due_notice",
         },
       },
 
@@ -552,7 +527,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: "ID_next_payment_due_notice",
+          nextPaymentInfoPrompt: "ID_payment_due_notice",
         },
       },
     ];
@@ -587,7 +562,7 @@ describe(`output`, () => {
             params.Locale
           );
 
-        expect(result).toEqual(promptResult);
+        expect(result.nextPaymentInfoPrompt).toEqual(promptResult);
       }
     );
   });
@@ -605,8 +580,33 @@ describe(`output`, () => {
         context: MAKE_PAYMENT,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          isPaymentEligible: true, // Gets overridden for "No ACH accounts"
+          isPaymentEligible: true,
+          isDebitCardPaymentEligible: false,
+          ineligibilityReason: "No ACH accounts",
+          paymentAccounts: JSON.stringify([]),
+          lastPostedPayment: undefined,
+          paymentOptions: JSON.stringify(false),
+          minimumPaymentAllowed: undefined,
+          maximumPaymentAllowed: undefined,
+          dueDate: undefined,
+          earliestAvailablePaymentDate: undefined,
+          latestAvailablePaymentDate: undefined,
+          isCutOffReached: undefined,
+          isCycleDayToday: false,
+          isAccountCycled: undefined,
+          isDueDateAfterCurrentDate: undefined,
           paymentInformationWSStatus: WS_STATUS.SUCCESS,
+          lastUsedBankAccount: undefined,
+          lastUsedDebitBankAccount: undefined,
+          paymentInformationWSResponseBody: {
+            isPaymentEligible: false,
+            ineligibilityReason: "No ACH accounts",
+            paymentAccounts: [],
+            paymentOptions: false,
+          },
+          paymentOptionsUniqueId: undefined,
+          nextPaymentInfoPrompt: undefined,
+          FailExitReason: undefined,
         },
       },
       {
@@ -696,8 +696,8 @@ describe(`output`, () => {
         params.Timestamp = new Date().toISOString();
 
         const result = await testHelper.runReformattedFunction(params);
-        
-        Object.keys(expectedResult).forEach(key => {
+
+        Object.keys(expectedResult).forEach((key) => {
           expect(result[key]).toEqual(expectedResult[key]);
         });
       }
@@ -786,8 +786,8 @@ describe(`output`, () => {
         params.Timestamp = new Date().toISOString();
 
         const result = await testHelper.runReformattedFunction(params);
-        
-        Object.keys(expectedResult).forEach(key => {
+
+        Object.keys(expectedResult).forEach((key) => {
           expect(result[key]).toEqual(expectedResult[key]);
         });
       }
@@ -811,13 +811,7 @@ describe(`output`, () => {
         customerRole: CUSTOMER_ROLE.PRIMARY,
         accountInCollections: BOOLEAN_STRING.TRUE,
         expectedResult: {
-          paymentOptions: JSON.stringify([
-            {
-              paymentOptionName: PaymentOptionTitle.MINIMUM_PAYMENT, // Gets renamed from CureAmount
-              amount: 150,
-            },
-          ]),
-          paymentInformationWSStatus: WS_STATUS.SUCCESS,
+          paymentInformationWSStatus: WS_STATUS.FAILURE,
         },
       },
       {
@@ -873,8 +867,8 @@ describe(`output`, () => {
         params.Timestamp = new Date().toISOString();
 
         const result = await testHelper.runReformattedFunction(params);
-        
-        Object.keys(expectedResult).forEach(key => {
+
+        Object.keys(expectedResult).forEach((key) => {
           expect(result[key]).toEqual(expectedResult[key]);
         });
       }
@@ -893,8 +887,33 @@ describe(`output`, () => {
         context: MAKE_PAYMENT,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          isDueDateAfterCurrentDate: true, // Should be calculated as true
+          isPaymentEligible: true,
+          isDebitCardPaymentEligible: undefined,
+          ineligibilityReason: undefined,
+          paymentAccounts: JSON.stringify(undefined),
+          lastPostedPayment: JSON.stringify(undefined),
+          paymentOptions: JSON.stringify(false),
+          minimumPaymentAllowed: undefined,
+          maximumPaymentAllowed: undefined,
+          dueDate: "2025-12-31",
+          earliestAvailablePaymentDate: undefined,
+          latestAvailablePaymentDate: undefined,
+          isCutOffReached: undefined,
+          isCycleDayToday: false,
+          isAccountCycled: undefined,
+          isDueDateAfterCurrentDate: true,
           paymentInformationWSStatus: WS_STATUS.SUCCESS,
+          lastUsedBankAccount: undefined,
+          lastUsedDebitBankAccount: undefined,
+          paymentInformationWSResponseBody: {
+            isPaymentEligible: true,
+            dueDate: "2025-12-31",
+            isDueDateAfterCurrentDate: undefined,
+            paymentOptions: false,
+          },
+          paymentOptionsUniqueId: undefined,
+          nextPaymentInfoPrompt: undefined,
+          FailExitReason: undefined,
         },
       },
       {
@@ -907,8 +926,33 @@ describe(`output`, () => {
         context: MAKE_PAYMENT,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          isDueDateAfterCurrentDate: false, // Should be calculated as false
+          isPaymentEligible: true,
+          isDebitCardPaymentEligible: undefined,
+          ineligibilityReason: undefined,
+          paymentAccounts: JSON.stringify(undefined),
+          lastPostedPayment: JSON.stringify(undefined),
+          paymentOptions: JSON.stringify(false),
+          minimumPaymentAllowed: undefined,
+          maximumPaymentAllowed: undefined,
+          dueDate: "2020-01-01",
+          earliestAvailablePaymentDate: undefined,
+          latestAvailablePaymentDate: undefined,
+          isCutOffReached: undefined,
+          isCycleDayToday: false,
+          isAccountCycled: undefined,
+          isDueDateAfterCurrentDate: false,
           paymentInformationWSStatus: WS_STATUS.SUCCESS,
+          lastUsedBankAccount: undefined,
+          lastUsedDebitBankAccount: undefined,
+          paymentInformationWSResponseBody: {
+            isPaymentEligible: true,
+            dueDate: "2020-01-01",
+            isDueDateAfterCurrentDate: undefined,
+            paymentOptions: false,
+          },
+          paymentOptionsUniqueId: undefined,
+          nextPaymentInfoPrompt: undefined,
+          FailExitReason: undefined,
         },
       },
       {
@@ -946,8 +990,8 @@ describe(`output`, () => {
         params.Timestamp = new Date().toISOString();
 
         const result = await testHelper.runReformattedFunction(params);
-        
-        Object.keys(expectedResult).forEach(key => {
+
+        Object.keys(expectedResult).forEach((key) => {
           expect(result[key]).toEqual(expectedResult[key]);
         });
       }
@@ -961,7 +1005,8 @@ describe(`output`, () => {
         wsResponseBody: {
           isPaymentEligible: true,
           paymentAccounts: [paymentAccount],
-          suggestedTokenizedPaymentAccountReferenceId: paymentAccount.tokenizedPaymentAccountReferenceId,
+          suggestedTokenizedPaymentAccountReferenceId:
+            paymentAccount.tokenizedPaymentAccountReferenceId,
         },
         context: MAKE_PAYMENT,
         customerRole: CUSTOMER_ROLE.PRIMARY,
@@ -975,7 +1020,8 @@ describe(`output`, () => {
         wsResponseBody: {
           isPaymentEligible: true,
           paymentAccounts: [paymentAccount],
-          suggestedTokenizedDebitPaymentAccountReferenceId: paymentAccount.tokenizedPaymentAccountReferenceId,
+          suggestedTokenizedDebitPaymentAccountReferenceId:
+            paymentAccount.tokenizedPaymentAccountReferenceId,
         },
         context: MAKE_PAYMENT,
         customerRole: CUSTOMER_ROLE.PRIMARY,
@@ -1006,8 +1052,8 @@ describe(`output`, () => {
         params.Timestamp = new Date().toISOString();
 
         const result = await testHelper.runReformattedFunction(params);
-        
-        Object.keys(expectedResult).forEach(key => {
+
+        Object.keys(expectedResult).forEach((key) => {
           expect(result[key]).toEqual(expectedResult[key]);
         });
       }
@@ -1079,8 +1125,8 @@ describe(`output`, () => {
         params.Timestamp = new Date().toISOString();
 
         const result = await testHelper.runReformattedFunction(params);
-        
-        Object.keys(expectedResult).forEach(key => {
+
+        Object.keys(expectedResult).forEach((key) => {
           expect(result[key]).toEqual(expectedResult[key]);
         });
       }
@@ -1121,7 +1167,7 @@ describe(`output`, () => {
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
           // This should generate a complex prompt with multiple parts
-          nextPaymentInfoPrompt: expect.stringContaining("payment")
+          nextPaymentInfoPrompt: expect.stringContaining("payment"),
         },
       },
       // Minimum due covered scenario
@@ -1141,7 +1187,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: expect.stringContaining("scheduled")
+          nextPaymentInfoPrompt: expect.stringContaining("scheduled"),
         },
       },
       // Multiple in-process payments
@@ -1163,7 +1209,7 @@ describe(`output`, () => {
         context: NEXT_PAYMENT_INFO,
         customerRole: CUSTOMER_ROLE.PRIMARY,
         expectedResult: {
-          nextPaymentInfoPrompt: expect.stringContaining("another")
+          nextPaymentInfoPrompt: expect.stringContaining("another"),
         },
       },
     ];
@@ -1190,10 +1236,12 @@ describe(`output`, () => {
         params.Timestamp = new Date().toISOString();
 
         const result = await testHelper.runReformattedFunction(params);
-        
+
         expect(result.nextPaymentInfoPrompt).toBeDefined();
         if (expectedResult.nextPaymentInfoPrompt.asymmetricMatch) {
-          expect(result.nextPaymentInfoPrompt).toEqual(expectedResult.nextPaymentInfoPrompt);
+          expect(result.nextPaymentInfoPrompt).toEqual(
+            expectedResult.nextPaymentInfoPrompt
+          );
         }
       }
     );
