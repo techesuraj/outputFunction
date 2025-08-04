@@ -1,0 +1,19 @@
+{
+  "name": "capone-test-case",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "eta": "^3.5.0",
+    "vitest": "^3.2.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@vitest/coverage-v8": "^3.2.4"
+  }
+}

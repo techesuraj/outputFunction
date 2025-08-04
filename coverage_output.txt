@@ -1,0 +1,625 @@
+
+ RUN  v3.2.4 /Users/gsk/Documents/Development/capone-test-case
+      Coverage enabled with v8
+
+stdout | outputFunction.test.js > outputFunction > Missing wsResponseBody scenarios > should handle error when getLastUsedAccount fails due to bug
+JS Exception
+ReferenceError: paymentAccounts is not defined
+    at getLastUsedAccount [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:397:18[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:279:27[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:255:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+
+stdout | outputFunction.test.js > outputFunction > Missing wsResponseBody scenarios > should handle error when getLastUsedDebitAccount fails due to bug
+JS Exception
+ReferenceError: paymentAccounts is not defined
+    at getLastUsedDebitAccount [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:411:18[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:283:32[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:265:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+
+stdout | outputFunction.test.js > outputFunction > Additional branch coverage > should handle multiple accounts in getLastUsedAccount path
+JS Exception
+ReferenceError: paymentAccounts is not defined
+    at getLastUsedAccount [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:397:18[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:279:27[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:409:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+
+stdout | outputFunction.test.js > outputFunction > Indirect function testing via creative scenarios > should test complex paymentAccounts scenarios
+JS Exception
+ReferenceError: paymentAccounts is not defined
+    at getLastUsedAccount [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:397:18[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:279:27[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:553:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+
+stdout | outputFunction.test.js > outputFunction > Comprehensive edge case testing > should test complex paymentAccounts filtering scenarios
+JS Exception
+ReferenceError: paymentAccounts is not defined
+    at getLastUsedAccount [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:397:18[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:279:27[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:699:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:105:5)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should execute NextPaymentInfo helper functions despite line 341 bug
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:902:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeLastStatementBalancePrompt
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:935:20
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:945:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:953:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeInterestSaverAmountPrompt
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:974:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeInProcessPaymentStatusPrompt
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1002:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeScheduledPaymentStatusPrompt
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1032:22
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover the isMinimumDueCovered branches
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1058:20
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1065:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover realizeNextPaymentDuePrompt branches
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1086:20
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1094:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeInProcessPaymentStatusPrompt function
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1122:20
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1134:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1144:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1150:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1155:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeScheduledPaymentStatusPrompt function
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1182:20
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1193:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1202:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1208:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1213:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover complex payment combinations in helper functions
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1247:20
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1255:16
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+stdout | outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover edge cases in payment status filtering
+JS Exception
+ReferenceError: params is not defined
+    at realizeNextPaymentDuePrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:463:37[90m)[39m
+    at realizeNextPaymentInfoPrompt [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:425:30[90m)[39m
+    at outputFunction [90m(/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.cjs:340:11[90m)[39m
+    at [90m/Users/gsk/Documents/Development/capone-test-case/[39moutputFunction.test.js:1286:20
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:155:11
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:752:26
+    at [90mfile:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1897:20
+    at new Promise (<anonymous>)
+    at runWithTimeout [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1863:10[90m)[39m
+    at runTest [90m(file:///Users/gsk/Documents/Development/capone-test-case/[39mnode_modules/[4m@vitest[24m/runner/dist/chunk-hooks.js:1574:12[90m)[39m
+
+ ❯ outputFunction.test.js (91 tests | 8 failed) 50ms
+   ✓ outputFunction > Known bugs > should demonstrate that wsStatus is implicitly declared as global 3ms
+   ✓ outputFunction > Known bugs > should demonstrate the NextPaymentInfo logic bug 0ms
+   ✓ outputFunction > Functionality that works despite bugs > should handle exceptions gracefully 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate NextPaymentInfo context bug with unsupported role 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate NextPaymentInfo context bug with authorized user 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate NextPaymentInfo context bug with empty role 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate ineligibility reason bug with unsupported user role 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate ineligibility reason bug with insufficient permissions 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate ineligibility reason bug with no payment options 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate ineligibility reason bug with zero balance 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate ineligibility reason bug with max pending payments 0ms
+   ✓ outputFunction > Additional scenario coverage > should demonstrate ineligibility reason bug with no ACH accounts 0ms
+   ✓ outputFunction > Additional scenario coverage > should handle collections override scenario 0ms
+   ✓ outputFunction > Additional scenario coverage > should handle past due without collections 0ms
+   ✓ outputFunction > Collections account scenarios > should refactor CureAmount to MinimumPayment when in collections 1ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle missing wsResponseBody with success status 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle 4xx client error codes 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle 5xx server error codes 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle invalid response codes 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle undefined isDueDateAfterCurrentDate calculation 12ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle error when getLastUsedAccount fails due to bug 12ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle error when getLastUsedDebitAccount fails due to bug 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle debit card payment eligibility for authorized users 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should handle isCycleDayToday property missing 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should demonstrate authorized user bug due to line 341 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should demonstrate empty customer role bug due to line 341 0ms
+   ✓ outputFunction > Missing wsResponseBody scenarios > should demonstrate no ACH accounts bug due to line 341 0ms
+   ✓ outputFunction > ConvertTZ function coverage > should handle string date input 0ms
+   ✓ outputFunction > ConvertTZ function coverage > should handle Date object input 0ms
+   ✓ outputFunction > Additional branch coverage > should handle paymentOptions as false 0ms
+   ✓ outputFunction > Additional branch coverage > should handle different response code patterns 0ms
+   ✓ outputFunction > Additional branch coverage > should handle different client error codes 0ms
+   ✓ outputFunction > Additional branch coverage > should handle different server error codes 0ms
+   ✓ outputFunction > Additional branch coverage > should handle isCollectionOverride as false string 0ms
+   ✓ outputFunction > Additional branch coverage > should handle accountPastDue true with collections false 0ms
+   ✓ outputFunction > Additional branch coverage > should handle customerRole coapplicant 0ms
+   ✓ outputFunction > Additional branch coverage > should handle customerRole as uppercase 0ms
+   ✓ outputFunction > Additional branch coverage > should handle hasOwnProperty false for isCycleDayToday 0ms
+   ✓ outputFunction > Additional branch coverage > should handle multiple accounts in getLastUsedAccount path 0ms
+   ✓ outputFunction > Additional branch coverage > should test different ineligibility scenarios in sequence 0ms
+   ✓ outputFunction > Additional branch coverage > should handle array check for paymentAccounts 0ms
+   ✓ outputFunction > Additional branch coverage > should handle non-array paymentAccounts 0ms
+   ✓ outputFunction > Translation function edge cases > should handle different translateBody functions 0ms
+   ✓ outputFunction > Translation function edge cases > should handle translateBody that returns empty string 0ms
+   ✓ outputFunction > Translation function edge cases > should handle translateBody with complex logic 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should exercise refactorCureAmount with multiple CureAmount options 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should test edge case in isInCollections logic 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should exercise date comparison logic with edge cases 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should test multiple branches in one scenario 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should test pattern matching edge cases 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should test different customer role combinations 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should test complex paymentAccounts scenarios 0ms
+   ✓ outputFunction > Indirect function testing via creative scenarios > should test zero vs empty string handling 0ms
+   ✓ outputFunction > Function interaction testing > should test interaction between isAU and debit card eligibility 0ms
+   ✓ outputFunction > Function interaction testing > should test isCustomerRoleSupported logic with various roles 0ms
+   ✓ outputFunction > Function interaction testing > should test all ineligibilityReason branches 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should handle all possible regex pattern boundaries 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test all possible isCollectionOverride values 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test boundary conditions for date comparison 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test all possible customerRole variations 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test complex paymentAccounts filtering scenarios 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test JSON.stringify edge cases 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test hasOwnProperty with inherited properties 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test extremely long response codes 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test non-string response codes 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test all possible accountInCollections and accountPastDue combinations 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test timezone conversion with edge cases 0ms
+   ✓ outputFunction > Comprehensive edge case testing > should test paymentOptions array manipulation edge cases 0ms
+   ✓ outputFunction > Exception and error path testing > should handle exceptions in translate function 0ms
+   ✓ outputFunction > Exception and error path testing > should handle exceptions in date parsing 0ms
+   ✓ outputFunction > Exception and error path testing > should handle circular reference in responseBody 0ms
+   ✓ outputFunction > Exception and error path testing > should handle all flag combinations for MakePayment context 0ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should execute NextPaymentInfo helper functions despite line 341 bug 0ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeLastStatementBalancePrompt 1ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeInterestSaverAmountPrompt 0ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeInProcessPaymentStatusPrompt 0ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeScheduledPaymentStatusPrompt 1ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover the isMinimumDueCovered branches 0ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover realizeNextPaymentDuePrompt branches 0ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeInProcessPaymentStatusPrompt function 1ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover all branches in realizeScheduledPaymentStatusPrompt function 1ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover complex payment combinations in helper functions 0ms
+   ✓ outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover edge cases in payment status filtering 0ms
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover refactorCureAmount function in collections scenarios 3ms
+     → expected 'failure' to be 'success' // Object.is equality
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover accountPastDue collections scenario 0ms
+     → expected 'failure' to be 'success' // Object.is equality
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover isCollectionOverride scenario 0ms
+     → expected 'failure' to be 'success' // Object.is equality
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover multiple CureAmount options in collections 3ms
+     → expected [ { …(2) }, { …(2) } ] to have a length of +0 but got 2
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover edge case with empty paymentOptions in collections 0ms
+     → expected 'failure' to be 'success' // Object.is equality
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover additional branches in date logic 0ms
+     → expected 'failure' to be 'success' // Object.is equality
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover timezone conversion edge cases 0ms
+     → expected 'failure' to be 'success' // Object.is equality
+   × outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover more response code patterns 0ms
+     → expected 'failure' to be 'success' // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover refactorCureAmount function in collections scenarios
+AssertionError: expected 'failure' to be 'success' // Object.is equality
+
+Expected: [32m"success"[39m
+Received: [31m"failure"[39m
+
+ ❯ outputFunction.test.js:1318:49
+    1316| 
+    1317|       const result = outputFunction(testParams);
+    1318|       expect(result.paymentInformationWSStatus).toBe("success");
+       |                                                 ^
+    1319|       
+    1320|       // The paymentOptions should have CureAmount renamed to MinimumP…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover accountPastDue collections scenario
+AssertionError: expected 'failure' to be 'success' // Object.is equality
+
+Expected: [32m"success"[39m
+Received: [31m"failure"[39m
+
+ ❯ outputFunction.test.js:1350:49
+    1348| 
+    1349|       const result = outputFunction(testParams);
+    1350|       expect(result.paymentInformationWSStatus).toBe("success");
+       |                                                 ^
+    1351|       
+    1352|       // Verify refactorCureAmount was called
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover isCollectionOverride scenario
+AssertionError: expected 'failure' to be 'success' // Object.is equality
+
+Expected: [32m"success"[39m
+Received: [31m"failure"[39m
+
+ ❯ outputFunction.test.js:1378:49
+    1376| 
+    1377|       const result = outputFunction(testParams);
+    1378|       expect(result.paymentInformationWSStatus).toBe("success");
+       |                                                 ^
+    1379|       
+    1380|       // CureAmount should NOT be renamed because of override
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover multiple CureAmount options in collections
+AssertionError: expected [ { …(2) }, { …(2) } ] to have a length of +0 but got 2
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 0[39m
+[31m+ 2[39m
+
+ ❯ outputFunction.test.js:1413:27
+    1411|       const minimumPayments = paymentOptions.filter(opt => opt.payment…
+    1412|       
+    1413|       expect(cureAmounts).toHaveLength(0); // All should be renamed
+       |                           ^
+    1414|       expect(minimumPayments).toHaveLength(3); // Original + 2 convert…
+    1415|       
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/8]⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover edge case with empty paymentOptions in collections
+AssertionError: expected 'failure' to be 'success' // Object.is equality
+
+Expected: [32m"success"[39m
+Received: [31m"failure"[39m
+
+ ❯ outputFunction.test.js:1436:49
+    1434| 
+    1435|       const result = outputFunction(testParams);
+    1436|       expect(result.paymentInformationWSStatus).toBe("success");
+       |                                                 ^
+    1437|       
+    1438|       // Should handle empty array gracefully
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/8]⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover additional branches in date logic
+AssertionError: expected 'failure' to be 'success' // Object.is equality
+
+Expected: [32m"success"[39m
+Received: [31m"failure"[39m
+
+ ❯ outputFunction.test.js:1459:49
+    1457| 
+    1458|       const result = outputFunction(testParams);
+    1459|       expect(result.paymentInformationWSStatus).toBe("success");
+       |                                                 ^
+    1460|       expect(result.isDueDateAfterCurrentDate).toBe(true); // Should b…
+    1461|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/8]⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover timezone conversion edge cases
+AssertionError: expected 'failure' to be 'success' // Object.is equality
+
+Expected: [32m"success"[39m
+Received: [31m"failure"[39m
+
+ ❯ outputFunction.test.js:1479:49
+    1477| 
+    1478|       const result = outputFunction(testParams);
+    1479|       expect(result.paymentInformationWSStatus).toBe("success");
+       |                                                 ^
+    1480|       expect(result.isDueDateAfterCurrentDate).toBe(false); // Should …
+    1481|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/8]⎯
+
+ FAIL  outputFunction.test.js > outputFunction > Attempting to reach NextPaymentInfo helper functions > should cover more response code patterns
+AssertionError: expected 'failure' to be 'success' // Object.is equality
+
+Expected: [32m"success"[39m
+Received: [31m"failure"[39m
+
+ ❯ outputFunction.test.js:1511:51
+    1509| 
+    1510|         const result = outputFunction(testParams);
+    1511|         expect(result.paymentInformationWSStatus).toBe(expectedStatus);
+       |                                                   ^
+    1512|         
+    1513|         if (expectedStatus === "failure" && !["400", "404", "499", "50…
+ ❯ outputFunction.test.js:1499:17
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/8]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  8 failed | 83 passed (91)
+   Start at  14:23:39
+   Duration  428ms (transform 68ms, setup 0ms, collect 76ms, tests 50ms, environment 0ms, prepare 59ms)
+
